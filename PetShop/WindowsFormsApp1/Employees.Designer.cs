@@ -40,6 +40,7 @@ namespace WindowsFormsApp1
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.EmployeeDGV = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDelete = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -68,8 +69,8 @@ namespace WindowsFormsApp1
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.EmployeeDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -79,7 +80,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -163,6 +163,24 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(1040, 548);
             this.panel1.TabIndex = 16;
             // 
+            // EmployeeDGV
+            // 
+            this.EmployeeDGV.AllowUserToAddRows = false;
+            this.EmployeeDGV.AllowUserToDeleteRows = false;
+            this.EmployeeDGV.AllowUserToResizeColumns = false;
+            this.EmployeeDGV.AllowUserToResizeRows = false;
+            this.EmployeeDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.EmployeeDGV.BackgroundColor = System.Drawing.Color.White;
+            this.EmployeeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmployeeDGV.Location = new System.Drawing.Point(15, 274);
+            this.EmployeeDGV.MultiSelect = false;
+            this.EmployeeDGV.Name = "EmployeeDGV";
+            this.EmployeeDGV.ReadOnly = true;
+            this.EmployeeDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.EmployeeDGV.Size = new System.Drawing.Size(1012, 259);
+            this.EmployeeDGV.TabIndex = 36;
+            this.EmployeeDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeeDGV_CellContentClick);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -219,6 +237,7 @@ namespace WindowsFormsApp1
             this.btnDelete.Size = new System.Drawing.Size(188, 41);
             this.btnDelete.TabIndex = 34;
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -488,24 +507,6 @@ namespace WindowsFormsApp1
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
-            // EmployeeDGV
-            // 
-            this.EmployeeDGV.AllowUserToAddRows = false;
-            this.EmployeeDGV.AllowUserToDeleteRows = false;
-            this.EmployeeDGV.AllowUserToResizeColumns = false;
-            this.EmployeeDGV.AllowUserToResizeRows = false;
-            this.EmployeeDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.EmployeeDGV.BackgroundColor = System.Drawing.Color.White;
-            this.EmployeeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmployeeDGV.Location = new System.Drawing.Point(15, 274);
-            this.EmployeeDGV.MultiSelect = false;
-            this.EmployeeDGV.Name = "EmployeeDGV";
-            this.EmployeeDGV.ReadOnly = true;
-            this.EmployeeDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EmployeeDGV.Size = new System.Drawing.Size(1012, 259);
-            this.EmployeeDGV.TabIndex = 36;
-            this.EmployeeDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeeDGV_CellContentClick);
-            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -532,6 +533,7 @@ namespace WindowsFormsApp1
             this.Text = "Employees";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -543,7 +545,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

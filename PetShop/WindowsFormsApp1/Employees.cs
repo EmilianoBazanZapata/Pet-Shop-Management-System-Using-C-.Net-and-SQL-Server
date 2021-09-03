@@ -167,6 +167,7 @@ namespace WindowsFormsApp1
                     con.Close();
                     DisplayEmployees();
                     Clear();
+                    key = 0;
                 }
                 catch (Exception ex)
                 {
@@ -179,6 +180,42 @@ namespace WindowsFormsApp1
                     Clear();
                 }
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (key == 0)
+            {
+                MessageBox.Show("You nedd select a employeen");
+            }
+            else 
+            {
+                try
+                {
+                    //abrimos la conexion a la base de datos
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("delete from EmployeeTbl where EmpNum = @EmpKey", con);
+                    //asignamos los valores a la sentencia para evitar la concatenacion por seguridad   
+                    cmd.Parameters.AddWithValue("@EmpKey", key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Employee Deleted");
+                    con.Close();
+                    DisplayEmployees();
+                    Clear();
+                    key = 0;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There's been a problem ==>" + ex.Message);
+                }
+                finally
+                {
+                    //cerramos la cadena independientemente si la sentencia se ejecuta d emanera exitosa o no
+                    con.Close();
+                    Clear();
+                }
+            }
+
         }
     }
 }
