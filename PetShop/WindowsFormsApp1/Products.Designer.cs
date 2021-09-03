@@ -339,6 +339,7 @@ namespace WindowsFormsApp1
             this.Deletebtn.Size = new System.Drawing.Size(188, 41);
             this.Deletebtn.TabIndex = 34;
             this.Deletebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
             // 
             // Editbtn
             // 
