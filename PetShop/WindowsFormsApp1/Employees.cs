@@ -17,8 +17,33 @@ namespace WindowsFormsApp1
         public Employees()
         {
             InitializeComponent();
+            DisplayEmployees();
         }
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Emiliano\Documents\PetShopDb.mdf;Integrated Security=True;Connect Timeout=30");
+        private void DisplayEmployees()
+        {
+            try
+            {
+                con.Open();
+                string Query = " select *" +
+                               " from EmployeeTbl";
+                SqlDataAdapter sda = new SqlDataAdapter(Query,con);
+                SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
+                var ds = new DataSet();
+                sda.Fill(ds);
+                EmployeeDGV.DataSource = ds.Tables[0];
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There's been a problem ==>" + ex.Message);
+            }
+            finally 
+            {
+                con.Close();
+            }
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (EmployeName.Equals(""))
@@ -53,6 +78,8 @@ namespace WindowsFormsApp1
                     cmd.Parameters.AddWithValue("@EPa", EmployeePassword.Text);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Employee : " + EmployeName.Text + " Added");
+                    con.Close();
+                    DisplayEmployees();
                 }
                 catch (Exception ex)
                 {
