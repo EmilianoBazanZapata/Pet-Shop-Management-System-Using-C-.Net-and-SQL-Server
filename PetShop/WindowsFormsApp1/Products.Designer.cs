@@ -305,6 +305,11 @@ namespace WindowsFormsApp1
             // 
             this.cboProductCategory.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboProductCategory.FormattingEnabled = true;
+            this.cboProductCategory.Items.AddRange(new object[] {
+            "Cat",
+            "Dog ",
+            "Bird",
+            "Food"});
             this.cboProductCategory.Location = new System.Drawing.Point(210, 69);
             this.cboProductCategory.Name = "cboProductCategory";
             this.cboProductCategory.Size = new System.Drawing.Size(295, 33);
@@ -488,6 +493,7 @@ namespace WindowsFormsApp1
             this.ProductDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ProductDGV.Size = new System.Drawing.Size(1012, 323);
             this.ProductDGV.TabIndex = 38;
+            this.ProductDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductDGV_CellContentClick);
             // 
             // Products
             // 
