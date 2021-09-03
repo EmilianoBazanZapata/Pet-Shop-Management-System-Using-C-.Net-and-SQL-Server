@@ -30,8 +30,6 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employees));
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,7 +40,6 @@ namespace WindowsFormsApp1
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.EmployeeDGV = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnDelete = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -71,8 +68,8 @@ namespace WindowsFormsApp1
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.EmployeeDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -82,6 +79,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -164,32 +162,6 @@ namespace WindowsFormsApp1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1040, 548);
             this.panel1.TabIndex = 16;
-            // 
-            // EmployeeDGV
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.EmployeeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.EmployeeDGV.BackgroundColor = System.Drawing.Color.White;
-            this.EmployeeDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EmployeeDGV.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.EmployeeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.EmployeeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.EmployeeDGV.DoubleBuffered = true;
-            this.EmployeeDGV.EnableHeadersVisualStyles = false;
-            this.EmployeeDGV.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.EmployeeDGV.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.EmployeeDGV.Location = new System.Drawing.Point(15, 282);
-            this.EmployeeDGV.Name = "EmployeeDGV";
-            this.EmployeeDGV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.EmployeeDGV.Size = new System.Drawing.Size(1012, 251);
-            this.EmployeeDGV.TabIndex = 36;
             // 
             // label11
             // 
@@ -515,6 +487,23 @@ namespace WindowsFormsApp1
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
+            // EmployeeDGV
+            // 
+            this.EmployeeDGV.AllowUserToAddRows = false;
+            this.EmployeeDGV.AllowUserToDeleteRows = false;
+            this.EmployeeDGV.AllowUserToResizeColumns = false;
+            this.EmployeeDGV.AllowUserToResizeRows = false;
+            this.EmployeeDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.EmployeeDGV.BackgroundColor = System.Drawing.Color.White;
+            this.EmployeeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmployeeDGV.Location = new System.Drawing.Point(15, 274);
+            this.EmployeeDGV.MultiSelect = false;
+            this.EmployeeDGV.Name = "EmployeeDGV";
+            this.EmployeeDGV.ReadOnly = true;
+            this.EmployeeDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.EmployeeDGV.Size = new System.Drawing.Size(1012, 259);
+            this.EmployeeDGV.TabIndex = 36;
+            // 
             // Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,7 +530,6 @@ namespace WindowsFormsApp1
             this.Text = "Employees";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -553,6 +541,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -591,12 +580,12 @@ namespace WindowsFormsApp1
         private Bunifu.Framework.UI.BunifuThinButton2 btnDelete;
         private Bunifu.Framework.UI.BunifuThinButton2 btnEdit;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSave;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid EmployeeDGV;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private System.Windows.Forms.DataGridView EmployeeDGV;
     }
 }

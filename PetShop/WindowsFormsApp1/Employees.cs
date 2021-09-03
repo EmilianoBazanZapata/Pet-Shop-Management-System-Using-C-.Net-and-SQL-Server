@@ -20,6 +20,7 @@ namespace WindowsFormsApp1
             DisplayEmployees();
         }
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Emiliano\Documents\PetShopDb.mdf;Integrated Security=True;Connect Timeout=30");
+        //listaremos los empleados una vez agreguemos uno y cuando se inicie el formulario
         private void DisplayEmployees()
         {
             try
@@ -46,23 +47,27 @@ namespace WindowsFormsApp1
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (EmployeName.Equals(""))
+            if (EmployeName.Text == "")
             {
                 MessageBox.Show("Please Add a Name");
+                return;
             }
-            if (EmployePhone.Equals(""))
+            if (EmployePhone.Text == "")
             {
                 MessageBox.Show("Please Add a Number Phone");
+                return;
             }
-            if (EmployeeAddress.Equals(""))
+            if (EmployeeAddress.Text == "")
             {
                 MessageBox.Show("Please Add a Address");
+                return;
             }
-            if (EmployeePassword.Equals(""))
+            if (EmployeePassword.Text == "")
             {
                 MessageBox.Show("Please Add a Password");
+                return;
             }
-            else
+            else if(EmployeName.Text != "" && EmployePhone.Text != "" && EmployeeAddress.Text != "" && EmployeePassword.Text != "")
             {
                 try
                 {
@@ -80,6 +85,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Employee : " + EmployeName.Text + " Added");
                     con.Close();
                     DisplayEmployees();
+                    Clear();
                 }
                 catch (Exception ex)
                 {
@@ -89,8 +95,17 @@ namespace WindowsFormsApp1
                 {
                     //cerramos la cadena independientemente si la sentencia se ejecuta d emanera exitosa o no
                     con.Close();
+                    Clear();
                 }
             }
+        }
+        //metodo para limpiar los campos del formulario
+        private void Clear() 
+        {
+            EmployeName.Text = "";
+            EmployeeAddress.Text = "";
+            EmployePhone.Text = "";
+            EmployeePassword.Text = "";
         }
     }
 }
