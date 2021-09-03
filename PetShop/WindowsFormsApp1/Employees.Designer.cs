@@ -244,6 +244,7 @@ namespace WindowsFormsApp1
             this.btnEdit.Size = new System.Drawing.Size(188, 41);
             this.btnEdit.TabIndex = 33;
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
@@ -503,6 +504,7 @@ namespace WindowsFormsApp1
             this.EmployeeDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EmployeeDGV.Size = new System.Drawing.Size(1012, 259);
             this.EmployeeDGV.TabIndex = 36;
+            this.EmployeeDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeeDGV_CellContentClick);
             // 
             // Employees
             // 
