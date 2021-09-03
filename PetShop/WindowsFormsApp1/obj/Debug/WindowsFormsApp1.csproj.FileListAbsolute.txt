@@ -2,7 +2,6 @@ C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-S
 C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
 C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
@@ -10,3 +9,5 @@ C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-S
 C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\bin\Debug\Bunifu_UI_v1.5.3.dll
 C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Login.resources
+C:\Users\Emiliano\Desktop\Pet Shop\Pet-Shop-Management-System-Using-C-.Net-and-SQL-Server\PetShop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Splash.resources

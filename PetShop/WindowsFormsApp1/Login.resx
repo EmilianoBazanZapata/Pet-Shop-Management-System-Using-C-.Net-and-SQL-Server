@@ -117,17 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="mascota-amigable(2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mascota-amigable(2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mascota-amigable(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mascota-amigable(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mascota-amigable" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mascota-amigable.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marca-x" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marca-x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuThinButton21.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALwAAAApCAYAAACP4kNbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJASURBVHhe7dxNS1RRGMDxvoSQilhquZGiddCuTbiTNkFf
+        Ighax4hT40TYJhepkFCLVoULadPGui++ZCrUuBCzF4Y05hs8zXMvTg7z6Hruef6L32ruPW7+M5x7vOec
+        azQaAnhB8HCF4OEKwcMVgocrBA9Xzgz+b/1Q9hdT2bq9KBs3ZiW5XJVPPZNAV9Eutc8v4wuyPxfJ0fe6
+        2bM6NfgfbzclGZmW5GJFPhp/BOhG8eBjSYYqsje7YnbdEbx+O7bvvGreNN0coNQxIFAEGv3nmy/kcPdn
+        W99twWvsq1dnJOqdMgcBiqUk6ZUZ+bNzYAevv+zEjtDo/L4j+GzOnk1j7JuAokoGK1J7uPw/eF2N0QdU
+        5uwIVTJSlfraXh68LuXo0611IRCE5lS9dn8pD17XL82LgICsXXuWB5+OPTUvAEISnZ/Kg48HHpkXAKHJ
+        grc+AEJE8HCF4OEKwcMVgocrBA9XCB6uEDxcyYLX/0BZHwKhyYJnryq8yILXrVC8GozQ6TtjWfC7k+8l
+        7ud9GoRt++7rPHjd85cMs9sJ4dLTNw7ebOTBq9qDJYkvVMyLgSKLesuyNfGyfU+rbvNbv/7cvAEorpKk
+        o09ahzO1gle65y9lxQbBKElyqSq/lndajbcFr35/+JqfTTNQNgYAiiHqK2e/7CdjVx3BK53efLv3TuLW
+        gyxLligGPRZSH1A3b82bZ0yawR/Tb4cu5cTNAazBgW6iW1X14F89ANjqWZ0ZPBAagocrBA9XCB6uEDwc
+        acg/EZLZXlRz3K4AAAAASUVORK5CYII=
+</value>
   </data>
 </root>
