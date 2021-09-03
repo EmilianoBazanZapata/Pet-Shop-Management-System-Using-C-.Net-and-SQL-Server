@@ -100,7 +100,35 @@ namespace WindowsFormsApp1
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            
+            if (key == 0)
+            {
+                MessageBox.Show("You nedd select a Customer");
+            }
+            else
+            {
+                try
+                {
+                    //abrimos la conexion a la base de datos
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("delete from CustomerTbl where CustId = @CustId", con);
+                    //asignamos los valores a la sentencia para evitar la concatenacion por seguridad   
+                    cmd.Parameters.AddWithValue("@CustId", key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Customer Deleted");
+                    con.Close();
+                    DisplayCustomers();
+                    key = 0;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There's been a problem ==>" + ex.Message);
+                }
+                finally
+                {
+                    //cerramos la cadena independientemente si la sentencia se ejecuta d emanera exitosa o no
+                    con.Close();
+                }
+            }
         }
     }
 }
