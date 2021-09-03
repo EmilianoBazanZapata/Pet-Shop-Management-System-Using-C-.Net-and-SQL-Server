@@ -130,5 +130,56 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (CustomerName.Text == "")
+            {
+                MessageBox.Show("Please Add a Name");
+                return;
+            }
+            if (CustomerPhone.Text == "")
+            {
+                MessageBox.Show("Please Add a Number Phone");
+                return;
+            }
+            if (CustomerAddress.Text == "")
+            {
+                MessageBox.Show("Please Add a Address");
+                return;
+            }
+            else if (CustomerName.Text != "" && CustomerPhone.Text != "" && CustomerAddress.Text != "")
+            {
+                try
+                {
+                    //abrimos la conexion a la base de datos
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("update CustomerTbl set" +
+                                                    " CustName = @CN ," +
+                                                    " CustAdd = @CA  ," +
+                                                    " CustPhone = @CP " +
+                                                    " where CustId =@CustId ", con);
+                    //asignamos los valores a la sentencia para evitar la concatenacion por seguridad   
+                    cmd.Parameters.AddWithValue("@CN", CustomerName.Text);
+                    cmd.Parameters.AddWithValue("@CA", CustomerAddress.Text);
+                    cmd.Parameters.AddWithValue("@CP", CustomerPhone.Text);
+                    cmd.Parameters.AddWithValue("@CustId", key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Employee Updated");
+                    con.Close();
+                    DisplayCustomers();
+                    key = 0;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There's been a problem ==>" + ex.Message);
+                }
+                finally
+                {
+                    //cerramos la cadena independientemente si la sentencia se ejecuta d emanera exitosa o no
+                    con.Close();
+                }
+            }
+        }
     }
 }

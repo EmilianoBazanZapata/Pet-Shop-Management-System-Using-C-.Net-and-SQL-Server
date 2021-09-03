@@ -130,6 +130,7 @@ namespace WindowsFormsApp1
             this.btnEdit.Size = new System.Drawing.Size(188, 41);
             this.btnEdit.TabIndex = 33;
             this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
