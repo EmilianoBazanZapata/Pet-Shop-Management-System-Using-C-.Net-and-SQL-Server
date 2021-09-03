@@ -45,6 +45,12 @@ namespace WindowsFormsApp1
                 con.Close();
             }
         }
+        private void Clear()
+        {
+            CustomerName.Text = "";
+            CustomerPhone.Text = "";
+            CustomerAddress.Text = "";
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (CustomerName.Text == "")
@@ -77,6 +83,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Customer : " + CustomerName.Text + " Added");
                     con.Close();
                     DisplayCustomers();
+                    Clear();
                 }
                 catch (Exception ex)
                 {
@@ -118,6 +125,7 @@ namespace WindowsFormsApp1
                     con.Close();
                     DisplayCustomers();
                     key = 0;
+                    Clear();
                 }
                 catch (Exception ex)
                 {
@@ -169,6 +177,7 @@ namespace WindowsFormsApp1
                     con.Close();
                     DisplayCustomers();
                     key = 0;
+                    Clear();
                 }
                 catch (Exception ex)
                 {
@@ -181,5 +190,6 @@ namespace WindowsFormsApp1
                 }
             }
         }
+        
     }
 }
