@@ -33,30 +33,20 @@ namespace WindowsFormsApp1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Products));
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ProductoPrice = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.ProductQuantity = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.ProductName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ProductDGV = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.cboProductCategory = new System.Windows.Forms.ComboBox();
-            this.Deletebtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.Editbtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.Savebtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label16 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -67,19 +57,29 @@ namespace WindowsFormsApp1
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.ProductDGV = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Deletebtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Editbtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.Savebtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDGV)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse3
@@ -95,16 +95,6 @@ namespace WindowsFormsApp1
             this.ProductoPrice.Size = new System.Drawing.Size(188, 32);
             this.ProductoPrice.TabIndex = 27;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.box;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 33);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 49;
-            this.pictureBox2.TabStop = false;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -116,46 +106,6 @@ namespace WindowsFormsApp1
             this.label10.TabIndex = 26;
             this.label10.Text = "Quantity";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.home;
-            this.pictureBox1.Location = new System.Drawing.Point(25, 190);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 46;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::WindowsFormsApp1.Properties.Resources.employee_1_;
-            this.pictureBox7.Location = new System.Drawing.Point(25, 75);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(51, 44);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 56;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.logout;
-            this.pictureBox6.Location = new System.Drawing.Point(25, 519);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(51, 59);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 54;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.bill;
-            this.pictureBox5.Location = new System.Drawing.Point(25, 432);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(51, 44);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 52;
-            this.pictureBox5.TabStop = false;
-            // 
             // ProductQuantity
             // 
             this.ProductQuantity.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,16 +113,6 @@ namespace WindowsFormsApp1
             this.ProductQuantity.Name = "ProductQuantity";
             this.ProductQuantity.Size = new System.Drawing.Size(188, 32);
             this.ProductQuantity.TabIndex = 25;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.employee;
-            this.pictureBox3.Location = new System.Drawing.Point(25, 312);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 44);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 44;
-            this.pictureBox3.TabStop = false;
             // 
             // panel4
             // 
@@ -193,16 +133,6 @@ namespace WindowsFormsApp1
             this.label3.Size = new System.Drawing.Size(96, 25);
             this.label3.TabIndex = 21;
             this.label3.Text = "Products";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.customer;
-            this.pictureBox4.Location = new System.Drawing.Point(25, 370);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(51, 44);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 36;
-            this.pictureBox4.TabStop = false;
             // 
             // label9
             // 
@@ -233,16 +163,6 @@ namespace WindowsFormsApp1
             this.label8.TabIndex = 22;
             this.label8.Text = "Products";
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::WindowsFormsApp1.Properties.Resources.pet_food;
-            this.pictureBox8.Location = new System.Drawing.Point(899, 24);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(92, 84);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 16;
-            this.pictureBox8.TabStop = false;
-            // 
             // bunifuElipse2
             // 
             this.bunifuElipse2.ElipseRadius = 35;
@@ -258,6 +178,24 @@ namespace WindowsFormsApp1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1040, 548);
             this.panel1.TabIndex = 48;
+            // 
+            // ProductDGV
+            // 
+            this.ProductDGV.AllowUserToAddRows = false;
+            this.ProductDGV.AllowUserToDeleteRows = false;
+            this.ProductDGV.AllowUserToResizeColumns = false;
+            this.ProductDGV.AllowUserToResizeRows = false;
+            this.ProductDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ProductDGV.BackgroundColor = System.Drawing.Color.White;
+            this.ProductDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductDGV.Location = new System.Drawing.Point(15, 210);
+            this.ProductDGV.MultiSelect = false;
+            this.ProductDGV.Name = "ProductDGV";
+            this.ProductDGV.ReadOnly = true;
+            this.ProductDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ProductDGV.Size = new System.Drawing.Size(1012, 323);
+            this.ProductDGV.TabIndex = 38;
+            this.ProductDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductDGV_CellContentClick);
             // 
             // label11
             // 
@@ -314,84 +252,6 @@ namespace WindowsFormsApp1
             this.cboProductCategory.Name = "cboProductCategory";
             this.cboProductCategory.Size = new System.Drawing.Size(295, 33);
             this.cboProductCategory.TabIndex = 35;
-            // 
-            // Deletebtn
-            // 
-            this.Deletebtn.ActiveBorderThickness = 1;
-            this.Deletebtn.ActiveCornerRadius = 20;
-            this.Deletebtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.Deletebtn.ActiveForecolor = System.Drawing.Color.White;
-            this.Deletebtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.Deletebtn.BackColor = System.Drawing.Color.White;
-            this.Deletebtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Deletebtn.BackgroundImage")));
-            this.Deletebtn.ButtonText = "Delete";
-            this.Deletebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Deletebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Deletebtn.ForeColor = System.Drawing.Color.SeaGreen;
-            this.Deletebtn.IdleBorderThickness = 1;
-            this.Deletebtn.IdleCornerRadius = 20;
-            this.Deletebtn.IdleFillColor = System.Drawing.Color.MediumVioletRed;
-            this.Deletebtn.IdleForecolor = System.Drawing.Color.Black;
-            this.Deletebtn.IdleLineColor = System.Drawing.Color.MediumVioletRed;
-            this.Deletebtn.Location = new System.Drawing.Point(617, 110);
-            this.Deletebtn.Margin = new System.Windows.Forms.Padding(5);
-            this.Deletebtn.Name = "Deletebtn";
-            this.Deletebtn.Size = new System.Drawing.Size(188, 41);
-            this.Deletebtn.TabIndex = 34;
-            this.Deletebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
-            // 
-            // Editbtn
-            // 
-            this.Editbtn.ActiveBorderThickness = 1;
-            this.Editbtn.ActiveCornerRadius = 20;
-            this.Editbtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.Editbtn.ActiveForecolor = System.Drawing.Color.White;
-            this.Editbtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.Editbtn.BackColor = System.Drawing.Color.White;
-            this.Editbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Editbtn.BackgroundImage")));
-            this.Editbtn.ButtonText = "Edit";
-            this.Editbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Editbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Editbtn.ForeColor = System.Drawing.Color.SeaGreen;
-            this.Editbtn.IdleBorderThickness = 1;
-            this.Editbtn.IdleCornerRadius = 20;
-            this.Editbtn.IdleFillColor = System.Drawing.Color.MediumVioletRed;
-            this.Editbtn.IdleForecolor = System.Drawing.Color.Black;
-            this.Editbtn.IdleLineColor = System.Drawing.Color.MediumVioletRed;
-            this.Editbtn.Location = new System.Drawing.Point(419, 110);
-            this.Editbtn.Margin = new System.Windows.Forms.Padding(5);
-            this.Editbtn.Name = "Editbtn";
-            this.Editbtn.Size = new System.Drawing.Size(188, 41);
-            this.Editbtn.TabIndex = 33;
-            this.Editbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Editbtn.Click += new System.EventHandler(this.Editbtn_Click);
-            // 
-            // Savebtn
-            // 
-            this.Savebtn.ActiveBorderThickness = 1;
-            this.Savebtn.ActiveCornerRadius = 20;
-            this.Savebtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.Savebtn.ActiveForecolor = System.Drawing.Color.White;
-            this.Savebtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.Savebtn.BackColor = System.Drawing.Color.White;
-            this.Savebtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Savebtn.BackgroundImage")));
-            this.Savebtn.ButtonText = "Save";
-            this.Savebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Savebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Savebtn.ForeColor = System.Drawing.Color.SeaGreen;
-            this.Savebtn.IdleBorderThickness = 1;
-            this.Savebtn.IdleCornerRadius = 20;
-            this.Savebtn.IdleFillColor = System.Drawing.Color.MediumVioletRed;
-            this.Savebtn.IdleForecolor = System.Drawing.Color.Black;
-            this.Savebtn.IdleLineColor = System.Drawing.Color.MediumVioletRed;
-            this.Savebtn.Location = new System.Drawing.Point(221, 110);
-            this.Savebtn.Margin = new System.Windows.Forms.Padding(5);
-            this.Savebtn.Name = "Savebtn";
-            this.Savebtn.Size = new System.Drawing.Size(188, 41);
-            this.Savebtn.TabIndex = 32;
-            this.Savebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
             // 
             // label16
             // 
@@ -479,23 +339,163 @@ namespace WindowsFormsApp1
             this.label4.TabIndex = 37;
             this.label4.Text = "Customers";
             // 
-            // ProductDGV
+            // pictureBox4
             // 
-            this.ProductDGV.AllowUserToAddRows = false;
-            this.ProductDGV.AllowUserToDeleteRows = false;
-            this.ProductDGV.AllowUserToResizeColumns = false;
-            this.ProductDGV.AllowUserToResizeRows = false;
-            this.ProductDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ProductDGV.BackgroundColor = System.Drawing.Color.White;
-            this.ProductDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductDGV.Location = new System.Drawing.Point(15, 210);
-            this.ProductDGV.MultiSelect = false;
-            this.ProductDGV.Name = "ProductDGV";
-            this.ProductDGV.ReadOnly = true;
-            this.ProductDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ProductDGV.Size = new System.Drawing.Size(1012, 323);
-            this.ProductDGV.TabIndex = 38;
-            this.ProductDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductDGV_CellContentClick);
+            this.pictureBox4.Image = global::WindowsFormsApp1.Properties.Resources.customer;
+            this.pictureBox4.Location = new System.Drawing.Point(25, 370);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(51, 44);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 36;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.home;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 190);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(51, 46);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 46;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::WindowsFormsApp1.Properties.Resources.employee_1_;
+            this.pictureBox7.Location = new System.Drawing.Point(25, 75);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(51, 44);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 56;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::WindowsFormsApp1.Properties.Resources.logout;
+            this.pictureBox6.Location = new System.Drawing.Point(25, 519);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(51, 59);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 54;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.bill;
+            this.pictureBox5.Location = new System.Drawing.Point(25, 432);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(51, 44);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 52;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WindowsFormsApp1.Properties.Resources.employee;
+            this.pictureBox3.Location = new System.Drawing.Point(25, 312);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 44);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 44;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.box;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 33);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 49;
+            this.pictureBox2.TabStop = false;
+            // 
+            // Deletebtn
+            // 
+            this.Deletebtn.ActiveBorderThickness = 1;
+            this.Deletebtn.ActiveCornerRadius = 20;
+            this.Deletebtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.Deletebtn.ActiveForecolor = System.Drawing.Color.White;
+            this.Deletebtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Deletebtn.BackColor = System.Drawing.Color.White;
+            this.Deletebtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Deletebtn.BackgroundImage")));
+            this.Deletebtn.ButtonText = "Delete";
+            this.Deletebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Deletebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Deletebtn.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Deletebtn.IdleBorderThickness = 1;
+            this.Deletebtn.IdleCornerRadius = 20;
+            this.Deletebtn.IdleFillColor = System.Drawing.Color.MediumVioletRed;
+            this.Deletebtn.IdleForecolor = System.Drawing.Color.Black;
+            this.Deletebtn.IdleLineColor = System.Drawing.Color.MediumVioletRed;
+            this.Deletebtn.Location = new System.Drawing.Point(617, 110);
+            this.Deletebtn.Margin = new System.Windows.Forms.Padding(5);
+            this.Deletebtn.Name = "Deletebtn";
+            this.Deletebtn.Size = new System.Drawing.Size(188, 41);
+            this.Deletebtn.TabIndex = 34;
+            this.Deletebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
+            // 
+            // Editbtn
+            // 
+            this.Editbtn.ActiveBorderThickness = 1;
+            this.Editbtn.ActiveCornerRadius = 20;
+            this.Editbtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.Editbtn.ActiveForecolor = System.Drawing.Color.White;
+            this.Editbtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Editbtn.BackColor = System.Drawing.Color.White;
+            this.Editbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Editbtn.BackgroundImage")));
+            this.Editbtn.ButtonText = "Edit";
+            this.Editbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Editbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Editbtn.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Editbtn.IdleBorderThickness = 1;
+            this.Editbtn.IdleCornerRadius = 20;
+            this.Editbtn.IdleFillColor = System.Drawing.Color.MediumVioletRed;
+            this.Editbtn.IdleForecolor = System.Drawing.Color.Black;
+            this.Editbtn.IdleLineColor = System.Drawing.Color.MediumVioletRed;
+            this.Editbtn.Location = new System.Drawing.Point(419, 110);
+            this.Editbtn.Margin = new System.Windows.Forms.Padding(5);
+            this.Editbtn.Name = "Editbtn";
+            this.Editbtn.Size = new System.Drawing.Size(188, 41);
+            this.Editbtn.TabIndex = 33;
+            this.Editbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Editbtn.Click += new System.EventHandler(this.Editbtn_Click);
+            // 
+            // Savebtn
+            // 
+            this.Savebtn.ActiveBorderThickness = 1;
+            this.Savebtn.ActiveCornerRadius = 20;
+            this.Savebtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.Savebtn.ActiveForecolor = System.Drawing.Color.White;
+            this.Savebtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Savebtn.BackColor = System.Drawing.Color.White;
+            this.Savebtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Savebtn.BackgroundImage")));
+            this.Savebtn.ButtonText = "Save";
+            this.Savebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Savebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Savebtn.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Savebtn.IdleBorderThickness = 1;
+            this.Savebtn.IdleCornerRadius = 20;
+            this.Savebtn.IdleFillColor = System.Drawing.Color.MediumVioletRed;
+            this.Savebtn.IdleForecolor = System.Drawing.Color.Black;
+            this.Savebtn.IdleLineColor = System.Drawing.Color.MediumVioletRed;
+            this.Savebtn.Location = new System.Drawing.Point(221, 110);
+            this.Savebtn.Margin = new System.Windows.Forms.Padding(5);
+            this.Savebtn.Name = "Savebtn";
+            this.Savebtn.Size = new System.Drawing.Size(188, 41);
+            this.Savebtn.TabIndex = 32;
+            this.Savebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::WindowsFormsApp1.Properties.Resources.pet_food;
+            this.pictureBox8.Location = new System.Drawing.Point(899, 24);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(92, 84);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 16;
+            this.pictureBox8.TabStop = false;
             // 
             // Products
             // 
@@ -520,21 +520,21 @@ namespace WindowsFormsApp1
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Products";
             this.Text = "Products";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDGV)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
