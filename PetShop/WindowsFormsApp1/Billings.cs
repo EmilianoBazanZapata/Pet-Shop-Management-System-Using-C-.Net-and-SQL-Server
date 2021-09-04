@@ -155,5 +155,25 @@ namespace WindowsFormsApp1
                 Reset();
             }
         }
+        private void Deletebtn_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void ProductsDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            PrNameTb.Text = ProductsDGV.SelectedRows[0].Cells[1].Value.ToString();
+            Stock = Convert.ToInt32(ProductsDGV.SelectedRows[0].Cells[3].Value.ToString());
+            PrPriceTb.Text = ProductsDGV.SelectedRows[0].Cells[4].Value.ToString();
+            if (PrNameTb.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(ProductsDGV.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
+        
     }
 }
