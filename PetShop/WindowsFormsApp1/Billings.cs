@@ -45,6 +45,31 @@ namespace WindowsFormsApp1
                 con.Close();
             }
         }
+        private void GetCustName()
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select * from CustomerTbl where CustId = @CustId", con);
+                cmd.Parameters.AddWithValue("@CustId", CustIdCb.SelectedValue);
+                DataTable dt = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+                foreach (DataRow dr in dt.Rows)
+                {
+                    custNameTb.Text = dr["CustName"].ToString();
+                }
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There's been a problem ==>" + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         
     }
 }
