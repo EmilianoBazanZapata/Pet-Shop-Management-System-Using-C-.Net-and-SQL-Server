@@ -142,5 +142,59 @@ namespace WindowsFormsApp1
                 }
             }
         }
+
+        private void Editbtn_Click(object sender, EventArgs e)
+        {
+            if (ProductName.Text == "")
+            {
+                MessageBox.Show("Please Add a Name");
+                return;
+            }
+            if (ProductoPrice.Text == "")
+            {
+                MessageBox.Show("Please Add a Price");
+                return;
+            }
+            if (ProductQuantity.Text == "")
+            {
+                MessageBox.Show("Please Add a Quantity");
+                return;
+            }
+            else if (ProductName.Text != "" && ProductoPrice.Text != "" && ProductQuantity.Text != "")
+            {
+                try
+                {
+                    //abrimos la conexion a la base de datos
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("update ProductTbl set" +
+                                                    " PrName = @PN ," +
+                                                    " PrCat = @PC  ," +
+                                                    " PrQty = @PQ  ," +
+                                                    " PrPrice = @PP " +
+                                                    " where PrId = @PKey ", con);
+                    //asignamos los valores a la sentencia para evitar la concatenacion por seguridad   
+                    cmd.Parameters.AddWithValue("@PN", ProductName.Text);
+                    cmd.Parameters.AddWithValue("@PC", cboProductCategory.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@PQ", ProductQuantity.Text);
+                    cmd.Parameters.AddWithValue("@PP", ProductoPrice.Text);
+                    cmd.Parameters.AddWithValue("@PKey", key);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Prodcut Updated");
+                    con.Close();
+                    DisplayCustomers();
+                    key = 0;
+                    Clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There's been a problem ==>" + ex.Message);
+                }
+                finally
+                {
+                    //cerramos la cadena independientemente si la sentencia se ejecuta d emanera exitosa o no
+                    con.Close();
+                }
+            }
+        }
     }
 }

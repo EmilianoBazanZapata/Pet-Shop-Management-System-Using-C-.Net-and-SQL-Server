@@ -365,6 +365,7 @@ namespace WindowsFormsApp1
             this.Editbtn.Size = new System.Drawing.Size(188, 41);
             this.Editbtn.TabIndex = 33;
             this.Editbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Editbtn.Click += new System.EventHandler(this.Editbtn_Click);
             // 
             // Savebtn
             // 
