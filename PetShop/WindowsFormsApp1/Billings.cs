@@ -95,6 +95,29 @@ namespace WindowsFormsApp1
                 con.Close();
             }
         }
-        
+        private void UpdateStock()
+        {
+            try
+            {
+                int NewQty = Stock - Convert.ToInt32(QtyTb.Text);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Update ProductTbl set PrQty = @PQ where PrId = @PKey",con);
+                cmd.Parameters.AddWithValue("@PQ", NewQty);
+                cmd.Parameters.AddWithValue("@PKey", key);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Product Edited");
+                con.Close();
+                DisplayProduct();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There's been a problem ==>" + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+       
     }
 }
