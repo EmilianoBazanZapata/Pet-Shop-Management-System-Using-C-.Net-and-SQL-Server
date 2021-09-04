@@ -55,6 +55,11 @@ namespace WindowsFormsApp1
             this.panel1 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.BillDGV = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalLbl = new System.Windows.Forms.Label();
             this.Printbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label16 = new System.Windows.Forms.Label();
@@ -80,11 +85,6 @@ namespace WindowsFormsApp1
             this.label13 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -185,6 +185,7 @@ namespace WindowsFormsApp1
             this.label4.Size = new System.Drawing.Size(111, 25);
             this.label4.TabIndex = 59;
             this.label4.Text = "Customers";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox4
             // 
@@ -245,6 +246,7 @@ namespace WindowsFormsApp1
             this.label12.Size = new System.Drawing.Size(111, 25);
             this.label12.TabIndex = 61;
             this.label12.Text = "Employees";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label1
             // 
@@ -255,6 +257,7 @@ namespace WindowsFormsApp1
             this.label1.Size = new System.Drawing.Size(66, 25);
             this.label1.TabIndex = 63;
             this.label1.Text = "Home";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label6
             // 
@@ -265,6 +268,7 @@ namespace WindowsFormsApp1
             this.label6.Size = new System.Drawing.Size(80, 25);
             this.label6.TabIndex = 69;
             this.label6.Text = "LogOut";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // bunifuElipse1
             // 
@@ -381,6 +385,36 @@ namespace WindowsFormsApp1
             this.BillDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.BillDGV.Size = new System.Drawing.Size(475, 240);
             this.BillDGV.TabIndex = 41;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // ProductPrice
+            // 
+            this.ProductPrice.HeaderText = "ProductPrice";
+            this.ProductPrice.Name = "ProductPrice";
+            this.ProductPrice.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
             // 
             // TotalLbl
             // 
@@ -641,6 +675,7 @@ namespace WindowsFormsApp1
             this.label13.Size = new System.Drawing.Size(96, 25);
             this.label13.TabIndex = 50;
             this.label13.Text = "Products";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // printDocument1
             // 
@@ -655,36 +690,6 @@ namespace WindowsFormsApp1
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // ProductPrice
-            // 
-            this.ProductPrice.HeaderText = "ProductPrice";
-            this.ProductPrice.Name = "ProductPrice";
-            this.ProductPrice.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
             // 
             // Billings
             // 
@@ -708,6 +713,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Billings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Billings";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

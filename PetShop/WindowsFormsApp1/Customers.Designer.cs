@@ -63,9 +63,9 @@ namespace WindowsFormsApp1
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CustomerDGV = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.CustomerDGV = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -283,6 +283,7 @@ namespace WindowsFormsApp1
             this.label1.Size = new System.Drawing.Size(66, 25);
             this.label1.TabIndex = 31;
             this.label1.Text = "Home";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label7
             // 
@@ -303,6 +304,7 @@ namespace WindowsFormsApp1
             this.label6.Size = new System.Drawing.Size(80, 25);
             this.label6.TabIndex = 41;
             this.label6.Text = "LogOut";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -313,6 +315,7 @@ namespace WindowsFormsApp1
             this.label5.Size = new System.Drawing.Size(73, 25);
             this.label5.TabIndex = 39;
             this.label5.Text = "Billing";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label2
             // 
@@ -323,6 +326,7 @@ namespace WindowsFormsApp1
             this.label2.Size = new System.Drawing.Size(96, 25);
             this.label2.TabIndex = 35;
             this.label2.Text = "Products";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // bunifuElipse3
             // 
@@ -431,6 +435,24 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(1040, 548);
             this.panel1.TabIndex = 32;
             // 
+            // CustomerDGV
+            // 
+            this.CustomerDGV.AllowUserToAddRows = false;
+            this.CustomerDGV.AllowUserToDeleteRows = false;
+            this.CustomerDGV.AllowUserToResizeColumns = false;
+            this.CustomerDGV.AllowUserToResizeRows = false;
+            this.CustomerDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CustomerDGV.BackgroundColor = System.Drawing.Color.White;
+            this.CustomerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CustomerDGV.Location = new System.Drawing.Point(15, 272);
+            this.CustomerDGV.MultiSelect = false;
+            this.CustomerDGV.Name = "CustomerDGV";
+            this.CustomerDGV.ReadOnly = true;
+            this.CustomerDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CustomerDGV.Size = new System.Drawing.Size(1012, 259);
+            this.CustomerDGV.TabIndex = 37;
+            this.CustomerDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomerDGV_CellContentClick);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -450,24 +472,7 @@ namespace WindowsFormsApp1
             this.label12.Size = new System.Drawing.Size(111, 25);
             this.label12.TabIndex = 22;
             this.label12.Text = "Employees";
-            // 
-            // CustomerDGV
-            // 
-            this.CustomerDGV.AllowUserToAddRows = false;
-            this.CustomerDGV.AllowUserToDeleteRows = false;
-            this.CustomerDGV.AllowUserToResizeColumns = false;
-            this.CustomerDGV.AllowUserToResizeRows = false;
-            this.CustomerDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.CustomerDGV.BackgroundColor = System.Drawing.Color.White;
-            this.CustomerDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomerDGV.Location = new System.Drawing.Point(15, 272);
-            this.CustomerDGV.MultiSelect = false;
-            this.CustomerDGV.Name = "CustomerDGV";
-            this.CustomerDGV.ReadOnly = true;
-            this.CustomerDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CustomerDGV.Size = new System.Drawing.Size(1012, 259);
-            this.CustomerDGV.TabIndex = 37;
-            this.CustomerDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.CustomerDGV_CellContentClick);
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // Customers
             // 

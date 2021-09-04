@@ -101,6 +101,7 @@ namespace WindowsFormsApp1
             this.label6.Size = new System.Drawing.Size(80, 25);
             this.label6.TabIndex = 27;
             this.label6.Text = "LogOut";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -111,6 +112,7 @@ namespace WindowsFormsApp1
             this.label5.Size = new System.Drawing.Size(73, 25);
             this.label5.TabIndex = 25;
             this.label5.Text = "Billing";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -121,6 +123,7 @@ namespace WindowsFormsApp1
             this.label4.Size = new System.Drawing.Size(111, 25);
             this.label4.TabIndex = 23;
             this.label4.Text = "Customers";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label2
             // 
@@ -131,6 +134,7 @@ namespace WindowsFormsApp1
             this.label2.Size = new System.Drawing.Size(96, 25);
             this.label2.TabIndex = 19;
             this.label2.Text = "Products";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -141,6 +145,7 @@ namespace WindowsFormsApp1
             this.label1.Size = new System.Drawing.Size(66, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Home";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // bunifuElipse3
             // 

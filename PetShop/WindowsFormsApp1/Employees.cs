@@ -217,5 +217,40 @@ namespace WindowsFormsApp1
             }
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Products obj = new Products();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Customers obj = new Customers();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Billings obj = new Billings();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Home obj = new Home();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

@@ -33,14 +33,18 @@ namespace WindowsFormsApp1
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaCircleProgressBar2 = new Guna.UI.WinForms.GunaCircleProgressBar();
+            this.label15 = new System.Windows.Forms.Label();
             this.lblFinance = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.BirdLbl = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.LblCat = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.DogsLbl = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -66,10 +70,6 @@ namespace WindowsFormsApp1
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.DogsLbl = new System.Windows.Forms.Label();
-            this.LblCat = new System.Windows.Forms.Label();
-            this.BirdLbl = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.gunaCircleProgressBar2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -127,6 +127,16 @@ namespace WindowsFormsApp1
             this.gunaCircleProgressBar2.Size = new System.Drawing.Size(208, 203);
             this.gunaCircleProgressBar2.TabIndex = 21;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(44, 89);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(23, 25);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "$";
+            // 
             // lblFinance
             // 
             this.lblFinance.AutoSize = true;
@@ -147,6 +157,16 @@ namespace WindowsFormsApp1
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(385, 94);
             this.panel6.TabIndex = 6;
+            // 
+            // BirdLbl
+            // 
+            this.BirdLbl.AutoSize = true;
+            this.BirdLbl.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirdLbl.Location = new System.Drawing.Point(231, 38);
+            this.BirdLbl.Name = "BirdLbl";
+            this.BirdLbl.Size = new System.Drawing.Size(24, 25);
+            this.BirdLbl.TabIndex = 6;
+            this.BirdLbl.Text = "0";
             // 
             // label14
             // 
@@ -179,6 +199,16 @@ namespace WindowsFormsApp1
             this.panel5.Size = new System.Drawing.Size(385, 94);
             this.panel5.TabIndex = 5;
             // 
+            // LblCat
+            // 
+            this.LblCat.AutoSize = true;
+            this.LblCat.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCat.Location = new System.Drawing.Point(224, 38);
+            this.LblCat.Name = "LblCat";
+            this.LblCat.Size = new System.Drawing.Size(24, 25);
+            this.LblCat.TabIndex = 5;
+            this.LblCat.Text = "0";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -209,6 +239,16 @@ namespace WindowsFormsApp1
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(385, 94);
             this.panel4.TabIndex = 4;
+            // 
+            // DogsLbl
+            // 
+            this.DogsLbl.AutoSize = true;
+            this.DogsLbl.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DogsLbl.Location = new System.Drawing.Point(227, 37);
+            this.DogsLbl.Name = "DogsLbl";
+            this.DogsLbl.Size = new System.Drawing.Size(24, 25);
+            this.DogsLbl.TabIndex = 4;
+            this.DogsLbl.Text = "0";
             // 
             // label12
             // 
@@ -341,6 +381,7 @@ namespace WindowsFormsApp1
             this.label2.Size = new System.Drawing.Size(96, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Products";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -351,6 +392,7 @@ namespace WindowsFormsApp1
             this.label3.Size = new System.Drawing.Size(111, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "Employees";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -361,6 +403,7 @@ namespace WindowsFormsApp1
             this.label4.Size = new System.Drawing.Size(111, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "Customers";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -371,6 +414,7 @@ namespace WindowsFormsApp1
             this.label5.Size = new System.Drawing.Size(73, 25);
             this.label5.TabIndex = 11;
             this.label5.Text = "Billing";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -381,6 +425,7 @@ namespace WindowsFormsApp1
             this.label6.Size = new System.Drawing.Size(80, 25);
             this.label6.TabIndex = 13;
             this.label6.Text = "LogOut";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -452,46 +497,6 @@ namespace WindowsFormsApp1
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // DogsLbl
-            // 
-            this.DogsLbl.AutoSize = true;
-            this.DogsLbl.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DogsLbl.Location = new System.Drawing.Point(227, 37);
-            this.DogsLbl.Name = "DogsLbl";
-            this.DogsLbl.Size = new System.Drawing.Size(24, 25);
-            this.DogsLbl.TabIndex = 4;
-            this.DogsLbl.Text = "0";
-            // 
-            // LblCat
-            // 
-            this.LblCat.AutoSize = true;
-            this.LblCat.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCat.Location = new System.Drawing.Point(224, 38);
-            this.LblCat.Name = "LblCat";
-            this.LblCat.Size = new System.Drawing.Size(24, 25);
-            this.LblCat.TabIndex = 5;
-            this.LblCat.Text = "0";
-            // 
-            // BirdLbl
-            // 
-            this.BirdLbl.AutoSize = true;
-            this.BirdLbl.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BirdLbl.Location = new System.Drawing.Point(231, 38);
-            this.BirdLbl.Name = "BirdLbl";
-            this.BirdLbl.Size = new System.Drawing.Size(24, 25);
-            this.BirdLbl.TabIndex = 6;
-            this.BirdLbl.Text = "0";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(44, 89);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(23, 25);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "$";
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -514,6 +519,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

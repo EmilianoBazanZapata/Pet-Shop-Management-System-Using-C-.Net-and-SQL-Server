@@ -237,6 +237,42 @@ namespace WindowsFormsApp1
             DisplayBills();
         }
         int prodid,prodqty,prodprice,total,pos = 60;
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Customers obj = new Customers();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            Employees obj = new Employees();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            Products obj = new Products();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Home obj = new Home();
+            obj.Show();
+            this.Hide();
+        }
+
         string prodname;
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {

@@ -110,5 +110,40 @@ namespace WindowsFormsApp1
                 con.Close();
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Products obj = new Products();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Employees obj = new Employees();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Customers obj = new Customers();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Billings obj = new Billings();
+            obj.Show();
+            this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            Login obj = new Login();
+            obj.Show();
+            this.Hide();
+        }
     }
 }
