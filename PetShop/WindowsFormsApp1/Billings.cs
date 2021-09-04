@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         public Billings()
         {
             InitializeComponent();
+            DisplayProduct();
             GetCustomers();
         }
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Emiliano\Documents\PetShopDb.mdf;Integrated Security=True;Connect Timeout=30");
@@ -60,6 +61,30 @@ namespace WindowsFormsApp1
                     custNameTb.Text = dr["CustName"].ToString();
                 }
                 con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There's been a problem ==>" + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        private void DisplayProduct()
+        {
+            try
+            {
+                con.Open();
+                string Query = " select *" +
+                               " from ProductTbl";
+                SqlDataAdapter sda = new SqlDataAdapter(Query, con);
+                SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
+                var ds = new DataSet();
+                sda.Fill(ds);
+                ProductsDGV.DataSource = ds.Tables[0];
+                con.Close();
+
             }
             catch (Exception ex)
             {
