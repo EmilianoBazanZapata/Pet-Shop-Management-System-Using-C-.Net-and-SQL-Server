@@ -15,6 +15,22 @@ namespace WindowsFormsApp1
         public Splash()
         {
             InitializeComponent();
+            timer1.Start();
+        }
+        int starP = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            starP += 1;
+            MyProgress.Value = starP;
+            lblPorcentaje.Text = starP + "%";
+            if (MyProgress.Value == 100)
+            {
+                MyProgress.Value = 0;
+                Login obj = new Login();
+                obj.Show();
+                this.Hide();
+                timer1.Stop();
+            }
         }
     }
 }
