@@ -144,8 +144,8 @@ namespace WindowsFormsApp1
                 newRow.CreateCells(BillDGV);
                 newRow.Cells[0].Value = n + 1;
                 newRow.Cells[1].Value = PrNameTb.Text;
-                newRow.Cells[2].Value = QtyTb.Text;
-                newRow.Cells[3].Value = PrPriceTb.Text;
+                newRow.Cells[2].Value = PrPriceTb.Text;
+                newRow.Cells[3].Value = QtyTb.Text;
                 newRow.Cells[4].Value = total;
                 GrdTotal = GrdTotal + total;
                 BillDGV.Rows.Add(newRow);
@@ -174,19 +174,47 @@ namespace WindowsFormsApp1
                 key = Convert.ToInt32(ProductsDGV.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
-        string prodname;
+        
         private void CustIdCb_SelectionChangeCommitted(object sender, EventArgs e)
         {
             GetCustName();
         }
-
         private void Printbtn_Click(object sender, EventArgs e)
         {
-            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm",285,600);
-            if(printPreviewDialog1.ShowDialog()==DialogResult.OK)
-            {
-                printDocument1.Print();
-            }
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
         }
+        int prodid,prodqty,prodprice,total,pos = 60;
+        string prodname;
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("My CodeSpace PetShop",new Font("Century Gothic",12,FontStyle.Bold),Brushes.Red, new Point(50));
+            e.Graphics.DrawString("ID PRODUCT PRICE QUANTITY TOTAL", new Font("Century Gothic", 10, FontStyle.Bold), Brushes.Red, new Point(5,20));
+            foreach (DataGridViewRow row in BillDGV.Rows)
+            {
+                prodid = Convert.ToInt32(row.Cells["Id"].Value);
+                prodname = "" + row.Cells["Nombre"].Value;
+                prodprice = Convert.ToInt32(row.Cells["ProductPrice"].Value);
+                prodqty = Convert.ToInt32(row.Cells["Quantity"].Value);
+                total = Convert.ToInt32(row.Cells["Total"].Value);
+
+                e.Graphics.DrawString("" + prodid, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(26,pos));
+                e.Graphics.DrawString("" + prodname, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(45,pos));
+                e.Graphics.DrawString("" + prodprice, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(110, pos));
+                e.Graphics.DrawString("" + prodqty, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(170, pos));
+                e.Graphics.DrawString("" + total, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(235  , pos));
+                pos = pos + 20;
+            }
+            e.Graphics.DrawString("Grand Total: $ " + GrdTotal, new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(50 , pos + 50));
+            e.Graphics.DrawString("***************PetShop***************", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Crimson, new Point(0, pos + 85));
+            BillDGV.Rows.Clear();
+            BillDGV.Refresh();
+            pos = 100;
+            GrdTotal = 0;
+            n = 0;
+
+        }
+
     }
 }
