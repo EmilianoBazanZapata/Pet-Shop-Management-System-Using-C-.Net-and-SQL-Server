@@ -174,6 +174,19 @@ namespace WindowsFormsApp1
                 key = Convert.ToInt32(ProductsDGV.SelectedRows[0].Cells[0].Value.ToString());
             }
         }
-        
+        string prodname;
+        private void CustIdCb_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            GetCustName();
+        }
+
+        private void Printbtn_Click(object sender, EventArgs e)
+        {
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm",285,600);
+            if(printPreviewDialog1.ShowDialog()==DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
     }
 }
