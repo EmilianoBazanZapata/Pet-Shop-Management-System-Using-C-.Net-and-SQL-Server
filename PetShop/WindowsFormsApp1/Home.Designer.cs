@@ -32,6 +32,8 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.gunaCircleProgressBar2 = new Guna.UI.WinForms.GunaCircleProgressBar();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -64,9 +66,11 @@ namespace WindowsFormsApp1
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.gunaCircleProgressBar2 = new Guna.UI.WinForms.GunaCircleProgressBar();
-            this.label15 = new System.Windows.Forms.Label();
+            this.DogsLbl = new System.Windows.Forms.Label();
+            this.LblCat = new System.Windows.Forms.Label();
+            this.BirdLbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.gunaCircleProgressBar2.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panel5.SuspendLayout();
@@ -83,7 +87,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.gunaCircleProgressBar2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -105,9 +108,37 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(1040, 585);
             this.panel1.TabIndex = 0;
             // 
+            // gunaCircleProgressBar2
+            // 
+            this.gunaCircleProgressBar2.AnimationSpeed = 0.6F;
+            this.gunaCircleProgressBar2.BaseColor = System.Drawing.Color.White;
+            this.gunaCircleProgressBar2.Controls.Add(this.label15);
+            this.gunaCircleProgressBar2.IdleColor = System.Drawing.Color.Gainsboro;
+            this.gunaCircleProgressBar2.IdleOffset = 20;
+            this.gunaCircleProgressBar2.Image = null;
+            this.gunaCircleProgressBar2.ImageSize = new System.Drawing.Size(52, 52);
+            this.gunaCircleProgressBar2.Location = new System.Drawing.Point(633, 347);
+            this.gunaCircleProgressBar2.Name = "gunaCircleProgressBar2";
+            this.gunaCircleProgressBar2.ProgressMaxColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaCircleProgressBar2.ProgressMinColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaCircleProgressBar2.ProgressOffset = 20;
+            this.gunaCircleProgressBar2.Size = new System.Drawing.Size(208, 203);
+            this.gunaCircleProgressBar2.TabIndex = 21;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(76, 89);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 25);
+            this.label15.TabIndex = 4;
+            this.label15.Text = "Cats";
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel6.Controls.Add(this.BirdLbl);
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.pictureBox11);
             this.panel6.Location = new System.Drawing.Point(537, 247);
@@ -138,6 +169,7 @@ namespace WindowsFormsApp1
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel5.Controls.Add(this.LblCat);
             this.panel5.Controls.Add(this.label13);
             this.panel5.Controls.Add(this.pictureBox10);
             this.panel5.Location = new System.Drawing.Point(125, 367);
@@ -168,6 +200,7 @@ namespace WindowsFormsApp1
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel4.Controls.Add(this.DogsLbl);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.pictureBox9);
             this.panel4.Location = new System.Drawing.Point(122, 248);
@@ -417,32 +450,35 @@ namespace WindowsFormsApp1
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // gunaCircleProgressBar2
+            // DogsLbl
             // 
-            this.gunaCircleProgressBar2.AnimationSpeed = 0.6F;
-            this.gunaCircleProgressBar2.BaseColor = System.Drawing.Color.White;
-            this.gunaCircleProgressBar2.Controls.Add(this.label15);
-            this.gunaCircleProgressBar2.IdleColor = System.Drawing.Color.Gainsboro;
-            this.gunaCircleProgressBar2.IdleOffset = 20;
-            this.gunaCircleProgressBar2.Image = null;
-            this.gunaCircleProgressBar2.ImageSize = new System.Drawing.Size(52, 52);
-            this.gunaCircleProgressBar2.Location = new System.Drawing.Point(633, 347);
-            this.gunaCircleProgressBar2.Name = "gunaCircleProgressBar2";
-            this.gunaCircleProgressBar2.ProgressMaxColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaCircleProgressBar2.ProgressMinColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaCircleProgressBar2.ProgressOffset = 20;
-            this.gunaCircleProgressBar2.Size = new System.Drawing.Size(208, 203);
-            this.gunaCircleProgressBar2.TabIndex = 21;
+            this.DogsLbl.AutoSize = true;
+            this.DogsLbl.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DogsLbl.Location = new System.Drawing.Point(227, 37);
+            this.DogsLbl.Name = "DogsLbl";
+            this.DogsLbl.Size = new System.Drawing.Size(24, 25);
+            this.DogsLbl.TabIndex = 4;
+            this.DogsLbl.Text = "0";
             // 
-            // label15
+            // LblCat
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(76, 89);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 25);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "Cats";
+            this.LblCat.AutoSize = true;
+            this.LblCat.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCat.Location = new System.Drawing.Point(224, 38);
+            this.LblCat.Name = "LblCat";
+            this.LblCat.Size = new System.Drawing.Size(24, 25);
+            this.LblCat.TabIndex = 5;
+            this.LblCat.Text = "0";
+            // 
+            // BirdLbl
+            // 
+            this.BirdLbl.AutoSize = true;
+            this.BirdLbl.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirdLbl.Location = new System.Drawing.Point(231, 38);
+            this.BirdLbl.Name = "BirdLbl";
+            this.BirdLbl.Size = new System.Drawing.Size(24, 25);
+            this.BirdLbl.TabIndex = 6;
+            this.BirdLbl.Text = "0";
             // 
             // Home
             // 
@@ -469,6 +505,8 @@ namespace WindowsFormsApp1
             this.Text = "Home";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.gunaCircleProgressBar2.ResumeLayout(false);
+            this.gunaCircleProgressBar2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -490,8 +528,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.gunaCircleProgressBar2.ResumeLayout(false);
-            this.gunaCircleProgressBar2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -535,5 +571,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox pictureBox11;
         private Guna.UI.WinForms.GunaCircleProgressBar gunaCircleProgressBar2;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label DogsLbl;
+        private System.Windows.Forms.Label LblCat;
+        private System.Windows.Forms.Label BirdLbl;
     }
 }

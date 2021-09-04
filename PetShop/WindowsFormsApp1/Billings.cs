@@ -95,6 +95,30 @@ namespace WindowsFormsApp1
                 con.Close();
             }
         }
+        private void DisplayBills()
+        {
+            try
+            {
+                con.Open();
+                string Query = " select *" +
+                               " from BillTbl";
+                SqlDataAdapter sda = new SqlDataAdapter(Query, con);
+                SqlCommandBuilder Builder = new SqlCommandBuilder(sda);
+                var ds = new DataSet();
+                sda.Fill(ds);
+                TransactionsDGV.DataSource = ds.Tables[0];
+                con.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There's been a problem ==>" + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         private void UpdateStock()
         {
             try
@@ -106,6 +130,31 @@ namespace WindowsFormsApp1
                 cmd.Parameters.AddWithValue("@PKey", key);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Product Edited");
+                con.Close();
+                DisplayProduct();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There's been a problem ==>" + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        private void Bill()
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("insert into BillTbl (BDate,CustId,CustName,EmpName,Amt) values(@BD,@CI,@CN,@EN,@AT)", con);
+                cmd.Parameters.AddWithValue("@BD", DateTime.Today.Date);
+                cmd.Parameters.AddWithValue("@CI", CustIdCb.SelectedValue.ToString());
+                cmd.Parameters.AddWithValue("@CN", custNameTb.Text);
+                cmd.Parameters.AddWithValue("@EN", "");
+                cmd.Parameters.AddWithValue("@AT", GrdTotal);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Bill Added");
                 con.Close();
                 DisplayProduct();
             }
@@ -181,9 +230,11 @@ namespace WindowsFormsApp1
         }
         private void Printbtn_Click(object sender, EventArgs e)
         {
+            Bill();
             printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
             printPreviewDialog1.Document = printDocument1;
             printPreviewDialog1.ShowDialog();
+            DisplayBills();
         }
         int prodid,prodqty,prodprice,total,pos = 60;
         string prodname;
