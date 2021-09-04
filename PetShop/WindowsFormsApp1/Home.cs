@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
             CountDogs();
             CountCats();
             CountBirds();
+            Finance();
         }
         SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Emiliano\Documents\PetShopDb.mdf;Integrated Security=True;Connect Timeout=30");
 
@@ -76,6 +77,27 @@ namespace WindowsFormsApp1
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
                 BirdLbl.Text = dt.Rows[0][0].ToString();
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There's been a problem ==>" + ex.Message);
+            }
+            finally
+            {
+                //cerramos la cadena independientemente si la sentencia se ejecuta d emanera exitosa o no
+                con.Close();
+            }
+        }
+        private void Finance()
+        {
+            try
+            {
+                con.Open();
+                SqlDataAdapter sda = new SqlDataAdapter("select sum(Amt) from BillTbl", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                lblFinance.Text = dt.Rows[0][0].ToString();
                 con.Close();
             }
             catch (Exception ex)
