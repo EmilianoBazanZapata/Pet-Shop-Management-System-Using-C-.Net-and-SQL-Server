@@ -118,6 +118,42 @@ namespace WindowsFormsApp1
                 con.Close();
             }
         }
-       
+        private void Reset() 
+        {
+            key = 0;
+            Stock = 0;
+            PrNameTb.Text = "";
+            QtyTb.Text = "";
+        }
+        int n = 0, GrdTotal = 0;
+
+        private void Savebtn_Click(object sender, EventArgs e)
+        {
+            if (QtyTb.Text == "" || Convert.ToInt32(QtyTb.Text) > Stock)
+            {
+                MessageBox.Show("No Enough In House");
+            }
+            else if (QtyTb.Text == "" || key == 0)
+            {
+                MessageBox.Show("Missing Information");
+            }
+            else
+            {
+                int total = Convert.ToInt32(QtyTb.Text) * Convert.ToInt32(PrPriceTb.Text);
+                DataGridViewRow newRow = new DataGridViewRow();
+                newRow.CreateCells(BillDGV);
+                newRow.Cells[0].Value = n + 1;
+                newRow.Cells[1].Value = PrNameTb.Text;
+                newRow.Cells[2].Value = QtyTb.Text;
+                newRow.Cells[3].Value = PrPriceTb.Text;
+                newRow.Cells[4].Value = total;
+                GrdTotal = GrdTotal + total;
+                BillDGV.Rows.Add(newRow);
+                n++;
+                TotalLbl.Text = "$" + GrdTotal;
+                UpdateStock();
+                Reset();
+            }
+        }
     }
 }
