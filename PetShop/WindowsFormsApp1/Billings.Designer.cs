@@ -32,9 +32,8 @@ namespace WindowsFormsApp1
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Billings));
             this.label2 = new System.Windows.Forms.Label();
-            this.cboProductCategory = new System.Windows.Forms.ComboBox();
+            this.CustIdCb = new System.Windows.Forms.ComboBox();
             this.Deletebtn = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.Editbtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.Savebtn = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -54,27 +53,38 @@ namespace WindowsFormsApp1
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ProductDGV = new System.Windows.Forms.DataGridView();
+            this.label17 = new System.Windows.Forms.Label();
+            this.BillDGV = new System.Windows.Forms.DataGridView();
+            this.TotalLbl = new System.Windows.Forms.Label();
+            this.Printbtn = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TransactionsDGV = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.QtyTb = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.PrPriceTb = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.PrNameTb = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.ProductsDGV = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.ProductName = new System.Windows.Forms.TextBox();
+            this.custNameTb = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label13 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label16 = new System.Windows.Forms.Label();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProductPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -84,12 +94,13 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductDGV)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransactionsDGV)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDGV)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -103,19 +114,15 @@ namespace WindowsFormsApp1
             this.label2.TabIndex = 36;
             this.label2.Text = "Customer Id";
             // 
-            // cboProductCategory
+            // CustIdCb
             // 
-            this.cboProductCategory.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboProductCategory.FormattingEnabled = true;
-            this.cboProductCategory.Items.AddRange(new object[] {
-            "Cat",
-            "Dog ",
-            "Bird",
-            "Food"});
-            this.cboProductCategory.Location = new System.Drawing.Point(17, 75);
-            this.cboProductCategory.Name = "cboProductCategory";
-            this.cboProductCategory.Size = new System.Drawing.Size(180, 33);
-            this.cboProductCategory.TabIndex = 35;
+            this.CustIdCb.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustIdCb.FormattingEnabled = true;
+            this.CustIdCb.Location = new System.Drawing.Point(17, 75);
+            this.CustIdCb.Name = "CustIdCb";
+            this.CustIdCb.Size = new System.Drawing.Size(180, 33);
+            this.CustIdCb.TabIndex = 35;
+            this.CustIdCb.SelectionChangeCommitted += new System.EventHandler(this.CustIdCb_SelectionChangeCommitted);
             // 
             // Deletebtn
             // 
@@ -126,7 +133,7 @@ namespace WindowsFormsApp1
             this.Deletebtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.Deletebtn.BackColor = System.Drawing.Color.White;
             this.Deletebtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Deletebtn.BackgroundImage")));
-            this.Deletebtn.ButtonText = "Delete";
+            this.Deletebtn.ButtonText = "Reset";
             this.Deletebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Deletebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Deletebtn.ForeColor = System.Drawing.Color.SeaGreen;
@@ -135,37 +142,13 @@ namespace WindowsFormsApp1
             this.Deletebtn.IdleFillColor = System.Drawing.Color.MediumVioletRed;
             this.Deletebtn.IdleForecolor = System.Drawing.Color.Black;
             this.Deletebtn.IdleLineColor = System.Drawing.Color.MediumVioletRed;
-            this.Deletebtn.Location = new System.Drawing.Point(313, 108);
+            this.Deletebtn.Location = new System.Drawing.Point(234, 108);
             this.Deletebtn.Margin = new System.Windows.Forms.Padding(5);
             this.Deletebtn.Name = "Deletebtn";
-            this.Deletebtn.Size = new System.Drawing.Size(104, 41);
+            this.Deletebtn.Size = new System.Drawing.Size(183, 41);
             this.Deletebtn.TabIndex = 34;
             this.Deletebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Editbtn
-            // 
-            this.Editbtn.ActiveBorderThickness = 1;
-            this.Editbtn.ActiveCornerRadius = 20;
-            this.Editbtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.Editbtn.ActiveForecolor = System.Drawing.Color.White;
-            this.Editbtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.Editbtn.BackColor = System.Drawing.Color.White;
-            this.Editbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Editbtn.BackgroundImage")));
-            this.Editbtn.ButtonText = "Edit";
-            this.Editbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Editbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Editbtn.ForeColor = System.Drawing.Color.SeaGreen;
-            this.Editbtn.IdleBorderThickness = 1;
-            this.Editbtn.IdleCornerRadius = 20;
-            this.Editbtn.IdleFillColor = System.Drawing.Color.MediumVioletRed;
-            this.Editbtn.IdleForecolor = System.Drawing.Color.Black;
-            this.Editbtn.IdleLineColor = System.Drawing.Color.MediumVioletRed;
-            this.Editbtn.Location = new System.Drawing.Point(169, 108);
-            this.Editbtn.Margin = new System.Windows.Forms.Padding(5);
-            this.Editbtn.Name = "Editbtn";
-            this.Editbtn.Size = new System.Drawing.Size(104, 41);
-            this.Editbtn.TabIndex = 33;
-            this.Editbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Deletebtn.Click += new System.EventHandler(this.Deletebtn_Click);
             // 
             // Savebtn
             // 
@@ -176,7 +159,7 @@ namespace WindowsFormsApp1
             this.Savebtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.Savebtn.BackColor = System.Drawing.Color.White;
             this.Savebtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Savebtn.BackgroundImage")));
-            this.Savebtn.ButtonText = "Save";
+            this.Savebtn.ButtonText = "Add to Bill";
             this.Savebtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Savebtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Savebtn.ForeColor = System.Drawing.Color.SeaGreen;
@@ -188,9 +171,10 @@ namespace WindowsFormsApp1
             this.Savebtn.Location = new System.Drawing.Point(34, 108);
             this.Savebtn.Margin = new System.Windows.Forms.Padding(5);
             this.Savebtn.Name = "Savebtn";
-            this.Savebtn.Size = new System.Drawing.Size(104, 41);
+            this.Savebtn.Size = new System.Drawing.Size(190, 41);
             this.Savebtn.TabIndex = 32;
             this.Savebtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Savebtn.Click += new System.EventHandler(this.Savebtn_Click);
             // 
             // label4
             // 
@@ -350,10 +334,14 @@ namespace WindowsFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightCyan;
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.BillDGV);
+            this.panel1.Controls.Add(this.TotalLbl);
+            this.panel1.Controls.Add(this.Printbtn);
             this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.TransactionsDGV);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.ProductDGV);
+            this.panel1.Controls.Add(this.ProductsDGV);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(252, 30);
@@ -361,40 +349,233 @@ namespace WindowsFormsApp1
             this.panel1.Size = new System.Drawing.Size(1040, 548);
             this.panel1.TabIndex = 64;
             // 
-            // ProductDGV
+            // label17
             // 
-            this.ProductDGV.AllowUserToAddRows = false;
-            this.ProductDGV.AllowUserToDeleteRows = false;
-            this.ProductDGV.AllowUserToResizeColumns = false;
-            this.ProductDGV.AllowUserToResizeRows = false;
-            this.ProductDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ProductDGV.BackgroundColor = System.Drawing.Color.White;
-            this.ProductDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductDGV.Location = new System.Drawing.Point(15, 232);
-            this.ProductDGV.MultiSelect = false;
-            this.ProductDGV.Name = "ProductDGV";
-            this.ProductDGV.ReadOnly = true;
-            this.ProductDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ProductDGV.Size = new System.Drawing.Size(475, 301);
-            this.ProductDGV.TabIndex = 38;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(172, 359);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(96, 25);
+            this.label17.TabIndex = 42;
+            this.label17.Text = "Products";
+            // 
+            // BillDGV
+            // 
+            this.BillDGV.AllowUserToAddRows = false;
+            this.BillDGV.AllowUserToDeleteRows = false;
+            this.BillDGV.AllowUserToResizeColumns = false;
+            this.BillDGV.AllowUserToResizeRows = false;
+            this.BillDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BillDGV.BackgroundColor = System.Drawing.Color.White;
+            this.BillDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BillDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cantidad,
+            this.Id,
+            this.ProductPrice,
+            this.Quantity,
+            this.Total});
+            this.BillDGV.Location = new System.Drawing.Point(546, 48);
+            this.BillDGV.MultiSelect = false;
+            this.BillDGV.Name = "BillDGV";
+            this.BillDGV.ReadOnly = true;
+            this.BillDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.BillDGV.Size = new System.Drawing.Size(475, 240);
+            this.BillDGV.TabIndex = 41;
+            // 
+            // TotalLbl
+            // 
+            this.TotalLbl.AutoSize = true;
+            this.TotalLbl.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalLbl.ForeColor = System.Drawing.Color.Black;
+            this.TotalLbl.Location = new System.Drawing.Point(737, 291);
+            this.TotalLbl.Name = "TotalLbl";
+            this.TotalLbl.Size = new System.Drawing.Size(23, 26);
+            this.TotalLbl.TabIndex = 37;
+            this.TotalLbl.Text = "$";
+            // 
+            // Printbtn
+            // 
+            this.Printbtn.ActiveBorderThickness = 1;
+            this.Printbtn.ActiveCornerRadius = 20;
+            this.Printbtn.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.Printbtn.ActiveForecolor = System.Drawing.Color.White;
+            this.Printbtn.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.Printbtn.BackColor = System.Drawing.Color.LightCyan;
+            this.Printbtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Printbtn.BackgroundImage")));
+            this.Printbtn.ButtonText = "Print";
+            this.Printbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Printbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Printbtn.ForeColor = System.Drawing.Color.SeaGreen;
+            this.Printbtn.IdleBorderThickness = 1;
+            this.Printbtn.IdleCornerRadius = 20;
+            this.Printbtn.IdleFillColor = System.Drawing.Color.MediumVioletRed;
+            this.Printbtn.IdleForecolor = System.Drawing.Color.Black;
+            this.Printbtn.IdleLineColor = System.Drawing.Color.MediumVioletRed;
+            this.Printbtn.Location = new System.Drawing.Point(546, 285);
+            this.Printbtn.Margin = new System.Windows.Forms.Padding(5);
+            this.Printbtn.Name = "Printbtn";
+            this.Printbtn.Size = new System.Drawing.Size(183, 41);
+            this.Printbtn.TabIndex = 35;
+            this.Printbtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Printbtn.Click += new System.EventHandler(this.Printbtn_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(703, 331);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(135, 25);
+            this.label16.TabIndex = 40;
+            this.label16.Text = "Transactions";
+            // 
+            // TransactionsDGV
+            // 
+            this.TransactionsDGV.AllowUserToAddRows = false;
+            this.TransactionsDGV.AllowUserToDeleteRows = false;
+            this.TransactionsDGV.AllowUserToResizeColumns = false;
+            this.TransactionsDGV.AllowUserToResizeRows = false;
+            this.TransactionsDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TransactionsDGV.BackgroundColor = System.Drawing.Color.White;
+            this.TransactionsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TransactionsDGV.Location = new System.Drawing.Point(546, 359);
+            this.TransactionsDGV.MultiSelect = false;
+            this.TransactionsDGV.Name = "TransactionsDGV";
+            this.TransactionsDGV.ReadOnly = true;
+            this.TransactionsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TransactionsDGV.Size = new System.Drawing.Size(475, 174);
+            this.TransactionsDGV.TabIndex = 39;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label15);
+            this.panel2.Controls.Add(this.QtyTb);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.Deletebtn);
+            this.panel2.Controls.Add(this.PrPriceTb);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.PrNameTb);
+            this.panel2.Controls.Add(this.Savebtn);
+            this.panel2.Controls.Add(this.label14);
+            this.panel2.Controls.Add(this.pictureBox9);
+            this.panel2.Location = new System.Drawing.Point(15, 191);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(475, 165);
+            this.panel2.TabIndex = 37;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(292, 39);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 26);
+            this.label15.TabIndex = 28;
+            this.label15.Text = "Quantity";
+            // 
+            // QtyTb
+            // 
+            this.QtyTb.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QtyTb.Location = new System.Drawing.Point(297, 68);
+            this.QtyTb.Name = "QtyTb";
+            this.QtyTb.Size = new System.Drawing.Size(135, 32);
+            this.QtyTb.TabIndex = 27;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(152, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 26);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Price";
+            // 
+            // PrPriceTb
+            // 
+            this.PrPriceTb.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrPriceTb.Location = new System.Drawing.Point(157, 68);
+            this.PrPriceTb.Name = "PrPriceTb";
+            this.PrPriceTb.Size = new System.Drawing.Size(135, 32);
+            this.PrPriceTb.TabIndex = 25;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(12, 39);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 26);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Name";
+            // 
+            // PrNameTb
+            // 
+            this.PrNameTb.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrNameTb.Location = new System.Drawing.Point(17, 68);
+            this.PrNameTb.Name = "PrNameTb";
+            this.PrNameTb.Size = new System.Drawing.Size(135, 32);
+            this.PrNameTb.TabIndex = 23;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(12, 14);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(87, 25);
+            this.label14.TabIndex = 22;
+            this.label14.Text = "Product";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = global::WindowsFormsApp1.Properties.Resources.pet_food;
+            this.pictureBox9.Location = new System.Drawing.Point(408, 9);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(58, 56);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 16;
+            this.pictureBox9.TabStop = false;
+            // 
+            // ProductsDGV
+            // 
+            this.ProductsDGV.AllowUserToAddRows = false;
+            this.ProductsDGV.AllowUserToDeleteRows = false;
+            this.ProductsDGV.AllowUserToResizeColumns = false;
+            this.ProductsDGV.AllowUserToResizeRows = false;
+            this.ProductsDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ProductsDGV.BackgroundColor = System.Drawing.Color.White;
+            this.ProductsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductsDGV.Location = new System.Drawing.Point(15, 387);
+            this.ProductsDGV.MultiSelect = false;
+            this.ProductsDGV.Name = "ProductsDGV";
+            this.ProductsDGV.ReadOnly = true;
+            this.ProductsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ProductsDGV.Size = new System.Drawing.Size(475, 146);
+            this.ProductsDGV.TabIndex = 38;
+            this.ProductsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductsDGV_CellContentClick);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(194, 204);
+            this.label11.Location = new System.Drawing.Point(706, 20);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 25);
+            this.label11.Size = new System.Drawing.Size(132, 25);
             this.label11.TabIndex = 35;
-            this.label11.Text = "Products List";
+            this.label11.Text = "Products Bill";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.cboProductCategory);
+            this.panel3.Controls.Add(this.CustIdCb);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.ProductName);
+            this.panel3.Controls.Add(this.custNameTb);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.pictureBox8);
             this.panel3.Location = new System.Drawing.Point(15, 20);
@@ -413,13 +594,13 @@ namespace WindowsFormsApp1
             this.label9.TabIndex = 24;
             this.label9.Text = "Name";
             // 
-            // ProductName
+            // custNameTb
             // 
-            this.ProductName.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductName.Location = new System.Drawing.Point(210, 75);
-            this.ProductName.Name = "ProductName";
-            this.ProductName.Size = new System.Drawing.Size(188, 32);
-            this.ProductName.TabIndex = 23;
+            this.custNameTb.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.custNameTb.Location = new System.Drawing.Point(210, 75);
+            this.custNameTb.Name = "custNameTb";
+            this.custNameTb.Size = new System.Drawing.Size(188, 32);
+            this.custNameTb.TabIndex = 23;
             // 
             // label8
             // 
@@ -461,128 +642,46 @@ namespace WindowsFormsApp1
             this.label13.TabIndex = 50;
             this.label13.Text = "Products";
             // 
-            // panel2
+            // Cantidad
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.Deletebtn);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.Editbtn);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.Savebtn);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.pictureBox9);
-            this.panel2.Location = new System.Drawing.Point(546, 20);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(475, 165);
-            this.panel2.TabIndex = 37;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Visible = false;
             // 
-            // label10
+            // Id
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(12, 39);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 26);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Name";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
             // 
-            // textBox1
+            // ProductPrice
             // 
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(17, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 32);
-            this.textBox1.TabIndex = 23;
+            this.ProductPrice.HeaderText = "ProductPrice";
+            this.ProductPrice.Name = "ProductPrice";
+            this.ProductPrice.ReadOnly = true;
             // 
-            // label14
+            // Quantity
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(12, 14);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(87, 25);
-            this.label14.TabIndex = 22;
-            this.label14.Text = "Product";
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
             // 
-            // pictureBox9
+            // Total
             // 
-            this.pictureBox9.Image = global::WindowsFormsApp1.Properties.Resources.pet_food;
-            this.pictureBox9.Location = new System.Drawing.Point(408, 9);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(58, 56);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 16;
-            this.pictureBox9.TabStop = false;
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
             // 
-            // label5
+            // printPreviewDialog1
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(152, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 26);
-            this.label5.TabIndex = 26;
-            this.label5.Text = "Price";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(157, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 32);
-            this.textBox2.TabIndex = 25;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Corbel", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(292, 39);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 26);
-            this.label15.TabIndex = 28;
-            this.label15.Text = "Quantity";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(297, 68);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(135, 32);
-            this.textBox3.TabIndex = 27;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(546, 232);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(475, 301);
-            this.dataGridView1.TabIndex = 39;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Cambria", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(736, 204);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(135, 25);
-            this.label16.TabIndex = 40;
-            this.label16.Text = "Products List";
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // Billings
             // 
@@ -618,14 +717,15 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductDGV)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BillDGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransactionsDGV)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductsDGV)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -634,9 +734,8 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cboProductCategory;
+        private System.Windows.Forms.ComboBox CustIdCb;
         private Bunifu.Framework.UI.BunifuThinButton2 Deletebtn;
-        private Bunifu.Framework.UI.BunifuThinButton2 Editbtn;
         private Bunifu.Framework.UI.BunifuThinButton2 Savebtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -654,11 +753,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView ProductDGV;
+        private System.Windows.Forms.DataGridView ProductsDGV;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox ProductName;
+        private System.Windows.Forms.TextBox custNameTb;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox8;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
@@ -668,14 +767,25 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox QtyTb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox PrPriceTb;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PrNameTb;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView TransactionsDGV;
+        private System.Windows.Forms.Label TotalLbl;
+        private Bunifu.Framework.UI.BunifuThinButton2 Printbtn;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DataGridView BillDGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
